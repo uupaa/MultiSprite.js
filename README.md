@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/uupaa.multisprite.js.png?downloads=true&stars=true)](https://nodei.co/npm/uupaa.multisprite.js/)
 
-Store multiple sprite sheets.
+Multiple Sprite(Texture) handler.
 
 ## Document
 
@@ -18,24 +18,22 @@ Store multiple sprite sheets.
 ```js
 <script src="lib/MultiSprite.js"></script>
 <script>
-console.log( MultiSprite() );
+var imageList = ["http://.../a.png", ...];
+var sprite = new MultiSprite();
+
+MultiSprite.imageLoader(imageList, function(images) {
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+
+    for (var i = 0, iz = images.length; i < iz; ++i) {
+        sprite.draw(images[i].src, ctx, i * 32, i * 32);
+    }
+}, function(error) {
+    throw error;
+}, function(image) {
+    sprite.add(image.src, image);
+});
 </script>
-```
-
-### WebWorkers
-
-```js
-importScripts("lib/MultiSprite.js");
-
-console.log( MultiSprite() );
-```
-
-### Node.js
-
-```js
-require("lib/MultiSprite.js");
-
-console.log( MultiSprite() );
 ```
 
 ### node-webkit
@@ -43,7 +41,6 @@ console.log( MultiSprite() );
 ```js
 <script src="lib/MultiSprite.js"></script>
 <script>
-console.log( MultiSprite() );
 </script>
 ```
 

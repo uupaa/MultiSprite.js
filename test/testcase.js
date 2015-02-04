@@ -45,6 +45,8 @@ var imageList = [
 
         "../node_modules/uupaa.testresource.js/assets/png/codec-test/tree.png",
         "../node_modules/uupaa.testresource.js/assets/png/codec-test/tree-copy1.png",
+        "../node_modules/uupaa.testresource.js/assets/png/codec-test/tree-copy2.png",
+        "../node_modules/uupaa.testresource.js/assets/png/codec-test/tree-copy3.png",
 
         "../node_modules/uupaa.testresource.js/assets/png/codec-test/24x8.png",
         "../node_modules/uupaa.testresource.js/assets/png/codec-test/3x3.png",
