@@ -1,6 +1,6 @@
 {
   "name": "uupaa.multisprite.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Store multiple sprite sheets.",
   "url": "https://github.com/uupaa/MultiSprite.js",
   "keywords": ["uupaa", "WebModule", "Unstable"],
